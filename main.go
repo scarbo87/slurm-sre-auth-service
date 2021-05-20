@@ -73,6 +73,9 @@ func main() {
 func getHttpHandler() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/metrics", promhttp.Handler().ServeHTTP)
+	mux.HandleFunc("/health", func(rw http.ResponseWriter, request *http.Request) {
+		_, _ = rw.Write(okResponse)
+	})
 	mux.HandleFunc("/", func(rw http.ResponseWriter, r *http.Request) {
 		token := r.Header.Get(authHeader)
 		if token != authToken {
@@ -89,7 +92,6 @@ func getHttpHandler() http.Handler {
 
 		rw.Header().Set("X-Auth-Operation-Id", operationId)
 		rw.Header().Set("Content-Type", "application/json; charset=utf-8")
-		rw.WriteHeader(http.StatusOK)
 		_, _ = rw.Write(okResponse)
 	})
 	return mux
