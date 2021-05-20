@@ -3,12 +3,12 @@ entries:
   slurm-sre-auth-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-05-21T01:14:42.580844+03:00"
+    created: "2021-05-21T01:26:11.342227+03:00"
     description: A Helm chart for Kubernetes
-    digest: 8c951832abef65dc093403fd77fd6e4ddadd45550d3aeaa8df2b0959cfcc6242
+    digest: 3f52cd8634a38e65b77123e415001322decadb1ae0cd347170a24c6475482c8f
     name: slurm-sre-auth-service
     type: application
     urls:
     - https://scarbo87.github.io/slurm-sre-auth-service/slurm-sre-auth-service-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-21T01:14:42.580188+03:00"
+generated: "2021-05-21T01:26:11.341551+03:00"
