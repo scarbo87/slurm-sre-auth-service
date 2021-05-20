@@ -24,17 +24,17 @@ var (
 )
 
 func init() {
-	address = os.Getenv("ADDRESS")
+	address = os.Getenv("AUTH_SERVICE_ADDRESS")
 	if address == "" {
 		address = ":2121"
 	}
 
-	authHeader = os.Getenv("PROVIDER_SOURCE_HEADER")
+	authHeader = os.Getenv("AUTH_SERVICE_HEADER")
 	if authHeader == "" {
 		authHeader = "X-Slurm-Source-Provider"
 	}
 
-	authToken = os.Getenv("PROVIDER_SOURCE_TOKEN")
+	authToken = os.Getenv("AUTH_SERVICE_TOKEN")
 	if authToken == "" {
 		authToken = "belgorod"
 	}

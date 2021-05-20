@@ -4,6 +4,11 @@
 
 replicaCount: 1
 
+env:
+  AUTH_SERVICE_ADDRESS: ":2121"
+  AUTH_SERVICE_HEADER: X-Slurm-Source-Provider
+  AUTH_SERVICE_TOKEN: belgorod
+
 image:
   repository: scarbo/slurm-sre-auth-service
   pullPolicy: IfNotPresent
